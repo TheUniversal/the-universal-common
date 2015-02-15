@@ -1,0 +1,15 @@
+{
+  "name": "the-universal-common",
+  "version": "0.1.0",
+  "description": "Static code and utilities for The Universal modules",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheUniversal/the-universal-common.git"
+  },
+  "author": "Matias Klemola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheUniversal/the-universal-common/issues"
+  },
+  "homepage": "https://github.com/TheUniversal/the-universal-common"
+}

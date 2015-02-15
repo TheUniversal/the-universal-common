@@ -1,2 +1,2 @@
 # the-universal-common
-Common utilities and data for The Universal project
+Static code and utilities for The Universal modules
