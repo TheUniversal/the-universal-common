@@ -1,18 +1,30 @@
 'use strict';
 
-var commands = require('../command/Commands');
+var Commands = require('../command/Commands');
+var PlaybackStatus = require('../playback/PlaybackStatus');
+
+function statusForCommand(command) {
+    switch (command) {
+        case Commands.PLAYBACK.PAUSE:
+            return PlaybackStatus.PAUSED;
+        case Commands.PLAYBACK.STOP:
+            return PlaybackStatus.STOPPED;
+        default:
+            return PlaybackStatus.PLAYING;
+    }
+}
 
 module.exports = function MockPlayerModule(playerEventDispatcher) {
 
     return {
         name: 'Mock player',
         supportedCommands: [
-            commands.PLAYBACK.PLAY,
-            commands.PLAYBACK.PAUSE,
-            commands.PLAYBACK.STOP
+            Commands.PLAYBACK.PLAY,
+            Commands.PLAYBACK.PAUSE,
+            Commands.PLAYBACK.STOP
         ],
         onPlaybackCommand: function (command) {
-            playerEventDispatcher.onPlaybackEvent(command);
+            playerEventDispatcher.onPlaybackEvent(statusForCommand(command));
         },
         onVolumeChange: function (command) {
             playerEventDispatcher.onVolumeChange(command);
