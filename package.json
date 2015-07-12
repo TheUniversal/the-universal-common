@@ -1,6 +1,6 @@
 {
   "name": "the-universal-common",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Static code and utilities for The Universal modules",
   "repository": {
     "type": "git",
