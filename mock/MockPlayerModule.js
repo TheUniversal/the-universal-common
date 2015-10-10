@@ -21,7 +21,12 @@ module.exports = function MockPlayerModule(playerEventDispatcher) {
         supportedCommands: [
             Commands.PLAYBACK.PLAY,
             Commands.PLAYBACK.PAUSE,
-            Commands.PLAYBACK.STOP
+            Commands.PLAYBACK.STOP,
+            Commands.PLAYBACK.PREVIOUS,
+            Commands.PLAYBACK.NEXT,
+            Commands.VOLUME.MUTE,
+            Commands.VOLUME.DOWN,
+            Commands.VOLUME.UP
         ],
         onPlaybackCommand: function (command) {
             playerEventDispatcher.onPlaybackEvent(statusForCommand(command));

@@ -12,8 +12,8 @@ module.exports = {
     },
 
     VOLUME: {
-        UP: 'vol-up',
-        DOWN: 'vol-down',
+        UP: 'volume-up',
+        DOWN: 'volume-down',
         MUTE: 'mute'
     }
 };
